@@ -19,12 +19,12 @@ from sklearn.preprocessing import LabelEncoder
 # Display Images
 # import Image from pillow to open images
 from PIL import Image
-img = Image.open("AI-based-PlantDisease-Detection/CROP-RECOMMENDATION/crop.png")
+img = Image.open("CROP-RECOMMENDATION/crop.png")
 # display image using streamlit
 # width is used to set the width of an image
 st.image(img)
 
-df= pd.read_csv('AI-based-PlantDisease-Detection/CROP-RECOMMENDATION/Crop_recommendation.csv')
+df= pd.read_csv('CROP-RECOMMENDATION/Crop_recommendation.csv')
 
 #features = df[['temperature', 'humidity', 'ph', 'rainfall']]
 X = df[['N', 'P','K','temperature', 'humidity', 'ph', 'rainfall']]
@@ -51,7 +51,7 @@ def show_crop_image(crop_name):
 
 import pickle
 # Dump the trained Naive Bayes classifier with Pickle
-RF_pkl_filename = 'AI-based-PlantDisease-Detection/CROP-RECOMMENDATION/RF.pkl'
+RF_pkl_filename = 'CROP-RECOMMENDATION/RF.pkl'
 # Open the file to save as pkl file
 RF_Model_pkl = open(RF_pkl_filename, 'wb')
 pickle.dump(RF, RF_Model_pkl)
@@ -59,8 +59,8 @@ pickle.dump(RF, RF_Model_pkl)
 RF_Model_pkl.close()
 
 
-#model = pickle.load(open('AI-based-PlantDisease-Detection/CROP-RECOMMENDATION/RF.pkl', 'rb'))
-RF_Model_pkl=pickle.load(open('AI-based-PlantDisease-Detection/CROP-RECOMMENDATION/RF.pkl','rb'))
+#model = pickle.load(open('CROP-RECOMMENDATION/RF.pkl', 'rb'))
+RF_Model_pkl=pickle.load(open('CROP-RECOMMENDATION/RF.pkl','rb'))
 
 ## Function to make predictions
 def predict_crop(nitrogen, phosphorus, potassium, temperature, humidity, ph, rainfall):
