@@ -2,7 +2,7 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 def model_prediction(test_image):
-    model = tf.keras.models.load_model("trained_plant_disease_model.keras")
+    model = tf.keras.models.load_model("PLANT-DISEASE-IDENTIFICATION/trained_plant_disease_model.keras")
     image = tf.keras.preprocessing.image.load_img(test_image,target_size=(128,128))
     input_arr = tf.keras.preprocessing.image.img_to_array(image)
     input_arr = np.array([input_arr]) #convert single image to batch
@@ -10,13 +10,13 @@ def model_prediction(test_image):
     return np.argmax(predictions) #return index of max element
 
 #Sidebar
-st.sidebar.title("AgriSens")
+st.sidebar.title("Plant Disease Identification")
 app_mode = st.sidebar.selectbox("Select Page",["HOME","DISEASE RECOGNITION"])
 #app_mode = st.sidebar.selectbox("Select Page",["Home","About","Disease Recognition"])
 
 # import Image from pillow to open images
 from PIL import Image
-img = Image.open("Diseases.png")
+img = Image.open("PLANT-DISEASE-IDENTIFICATION/Diseases.png")
 
 # display image using streamlit
 # width is used to set the width of an image
