@@ -2,6 +2,11 @@
 
 An advanced machine learning system for detecting and classifying plant diseases using deep learning techniques. This project leverages Convolutional Neural Networks (CNNs) to analyze plant leaf images and provide accurate disease diagnosis with treatment recommendations.
 
+## 🌐 Live Demos
+
+- **Smart Crop Recommendation**: https://ai-based-plantdisease-detectionjs.streamlit.app/
+- **Plant Disease Detection**: https://ai-based-plantdisease-detection-js.streamlit.app/
+
 ## 📋 Table of Contents
 - [Overview](#overview)
 - [Features](#features)
@@ -195,12 +200,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - GitHub: [@JS-Coder007](https://github.com/JS-Coder007)
 - Project Link: [https://github.com/JS-Coder007/AI-based-PlantDisease-Detection](https://github.com/JS-Coder007/AI-based-PlantDisease-Detection)
 
-## Acknowledgments
-
-- Dataset providers and contributors
-- TensorFlow and Keras communities
-- Open-source contributors
-- Agricultural research institutions
 
 ## 📚 References
 
